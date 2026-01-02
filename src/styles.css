@@ -5,6 +5,49 @@
   background-color: #f8fafc;
 }
 
+<<<<<<< HEAD
+=======
+body.theme-light {
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --bg-primary: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-soft: #f8fafc;
+  --border-color: #e2e8f0;
+  --shadow-color: rgba(15, 23, 42, 0.08);
+  --accent: #2563eb;
+  --accent-strong: #1d4ed8;
+  --accent-soft: #eff6ff;
+  --output-bg: #0b1221;
+  --output-text: #e2e8f0;
+  --output-border: #1e293b;
+  --badge-text: #fff;
+  --badge-bg: #2563eb;
+  --pill-bg: #eff6ff;
+  --pill-text: #1d4ed8;
+}
+
+body.theme-dark {
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --bg-primary: #0b1120;
+  --bg-card: #0f172a;
+  --bg-soft: #111827;
+  --border-color: #1f2937;
+  --shadow-color: rgba(15, 23, 42, 0.4);
+  --accent: #38bdf8;
+  --accent-strong: #7dd3fc;
+  --accent-soft: rgba(56, 189, 248, 0.16);
+  --output-bg: #0b1221;
+  --output-text: #e2e8f0;
+  --output-border: #1f2937;
+  --badge-text: #0f172a;
+  --badge-bg: #38bdf8;
+  --pill-bg: rgba(56, 189, 248, 0.16);
+  --pill-text: #bae6fd;
+}
+
+>>>>>>> 2b6d99e (Big initial push)
 * {
   box-sizing: border-box;
 }
@@ -15,8 +58,13 @@ body {
   background: radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.12), transparent 25%),
     radial-gradient(circle at 90% 10%, rgba(14, 165, 233, 0.12), transparent 25%),
     radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.12), transparent 20%),
+<<<<<<< HEAD
     #f8fafc;
   color: #0f172a;
+=======
+    var(--bg-primary);
+  color: var(--text-primary);
+>>>>>>> 2b6d99e (Big initial push)
 }
 
 a {
@@ -26,7 +74,217 @@ a {
 main {
   max-width: 1080px;
   margin: 0 auto;
+<<<<<<< HEAD
   padding: 48px 24px 64px;
+=======
+  padding: 48px 8px 64px;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--bg-card) 90%, transparent);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 12px 30px var(--shadow-color);
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.robot-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0ea5e9, #2563eb);
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.goofy-robot {
+  background: linear-gradient(135deg, #f97316, #fb7185);
+  transform: rotate(-6deg);
+  animation: tipsy-wobble 2.8s ease-in-out infinite;
+}
+
+.goofy-robot span {
+  position: absolute;
+  background: #fff7ed;
+}
+
+.goofy-robot .robot-antenna {
+  width: 6px;
+  height: 10px;
+  top: -6px;
+  left: 15px;
+  border-radius: 999px;
+  background: #facc15;
+  box-shadow: 0 -6px 0 0 #fb7185;
+}
+
+.goofy-robot .robot-eye {
+  width: 10px;
+  height: 12px;
+  border-radius: 6px;
+  background: #fef3c7;
+  border: 2px solid #0f172a;
+}
+
+.goofy-robot .robot-eye.left {
+  left: 6px;
+  top: 10px;
+}
+
+.goofy-robot .robot-eye.right {
+  right: 6px;
+  top: 8px;
+}
+
+.goofy-robot .robot-mouth {
+  width: 16px;
+  height: 6px;
+  bottom: 8px;
+  left: 11px;
+  background: #0f172a;
+  border-radius: 6px;
+}
+
+.goofy-robot .robot-cheek {
+  width: 6px;
+  height: 6px;
+  background: #fda4af;
+  border-radius: 999px;
+}
+
+.goofy-robot .robot-cheek.left {
+  left: 6px;
+  bottom: 10px;
+}
+
+.goofy-robot .robot-cheek.right {
+  right: 6px;
+  bottom: 12px;
+}
+
+@keyframes tipsy-wobble {
+  0% {
+    transform: rotate(-6deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-1deg) translateY(1px);
+  }
+  100% {
+    transform: rotate(-6deg) translateY(0);
+  }
+}
+
+.app-title {
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+}
+
+.app-title-group {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.app-tagline {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.08em;
+  text-transform: none;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.org-logo {
+  position: relative;
+  width: 30px;
+  height: 36px;
+}
+
+.mushroom-logo {
+  border-radius: 10px;
+  background: linear-gradient(180deg, #f8fafc, #e2e8f0);
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+}
+
+.mushroom-logo .mushroom-cap {
+  position: absolute;
+  top: 4px;
+  left: 2px;
+  right: 2px;
+  height: 14px;
+  background: #ef4444;
+  border-radius: 14px 14px 6px 6px;
+  box-shadow: inset 0 -3px 0 rgba(255, 255, 255, 0.5);
+}
+
+.mushroom-logo .mushroom-dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: #fef2f2;
+}
+
+.mushroom-logo .mushroom-dot.left {
+  top: 8px;
+  left: 7px;
+}
+
+.mushroom-logo .mushroom-dot.right {
+  top: 10px;
+  right: 7px;
+}
+
+.mushroom-logo .mushroom-stem {
+  position: absolute;
+  width: 10px;
+  height: 12px;
+  left: 10px;
+  top: 18px;
+  background: #fef3c7;
+  border-radius: 6px;
+  box-shadow: inset 0 -2px 0 rgba(251, 191, 36, 0.6);
+}
+
+.org-title {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.top-action {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.top-action:hover {
+  border-color: var(--accent);
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+>>>>>>> 2b6d99e (Big initial push)
 }
 
 .app-header {
@@ -51,6 +309,10 @@ main {
   border-radius: 999px;
   letter-spacing: 0.02em;
   font-size: 0.85rem;
+<<<<<<< HEAD
+=======
+  white-space: nowrap;
+>>>>>>> 2b6d99e (Big initial push)
 }
 
 h1 {
@@ -60,7 +322,11 @@ h1 {
 
 .subtitle {
   margin: 6px 0 0;
+<<<<<<< HEAD
   color: #475569;
+=======
+  color: var(--text-secondary);
+>>>>>>> 2b6d99e (Big initial push)
   font-size: 1.02rem;
 }
 
@@ -72,11 +338,19 @@ h1 {
 }
 
 .card {
+<<<<<<< HEAD
   background-color: #fff;
   border-radius: 16px;
   padding: 18px 18px 16px;
   box-shadow: 0 10px 40px rgba(15, 23, 42, 0.08);
   border: 1px solid #e2e8f0;
+=======
+  background-color: var(--bg-card);
+  border-radius: 16px;
+  padding: 18px 18px 16px;
+  box-shadow: 0 10px 40px var(--shadow-color);
+  border: 1px solid var(--border-color);
+>>>>>>> 2b6d99e (Big initial push)
 }
 
 .card h2 {
@@ -86,7 +360,11 @@ h1 {
 
 .card p {
   margin: 0 0 8px;
+<<<<<<< HEAD
   color: #475569;
+=======
+  color: var(--text-secondary);
+>>>>>>> 2b6d99e (Big initial push)
 }
 
 .form-field {
@@ -96,26 +374,50 @@ h1 {
   margin-top: 12px;
 }
 
+<<<<<<< HEAD
 label {
   font-weight: 600;
   color: #0f172a;
+=======
+.label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+label {
+  font-weight: 600;
+  color: var(--text-primary);
+>>>>>>> 2b6d99e (Big initial push)
 }
 
 textarea {
   width: 100%;
   border-radius: 12px;
+<<<<<<< HEAD
   border: 1px solid #cbd5e1;
+=======
+  border: 1px solid var(--border-color);
+>>>>>>> 2b6d99e (Big initial push)
   padding: 12px 14px;
   font-size: 1rem;
   font-family: 'Inter', system-ui, sans-serif;
   resize: vertical;
   min-height: 110px;
+<<<<<<< HEAD
   background-color: #f8fafc;
   transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+=======
+  background-color: var(--bg-soft);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  color: var(--text-primary);
+>>>>>>> 2b6d99e (Big initial push)
 }
 
 textarea:focus {
   outline: none;
+<<<<<<< HEAD
   border-color: #2563eb;
   box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.18);
   background-color: #fff;
@@ -123,6 +425,59 @@ textarea:focus {
 
 .helper {
   color: #475569;
+=======
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 25%, transparent);
+  background-color: var(--bg-card);
+}
+
+select {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  padding: 10px 12px;
+  font-size: 1rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--bg-soft);
+  color: var(--text-primary);
+}
+
+.select-label {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 12px;
+  display: inline-block;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  margin-top: 14px;
+  color: var(--text-primary);
+}
+
+.toggle input {
+  width: 18px;
+  height: 18px;
+}
+
+.preferences {
+  margin-top: 32px;
+}
+
+.preferences-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.helper {
+  color: var(--text-secondary);
+>>>>>>> 2b6d99e (Big initial push)
   font-size: 0.95rem;
   display: flex;
   align-items: center;
@@ -130,7 +485,11 @@ textarea:focus {
 }
 
 .helper strong {
+<<<<<<< HEAD
   color: #0f172a;
+=======
+  color: var(--text-primary);
+>>>>>>> 2b6d99e (Big initial push)
 }
 
 .button-row {
@@ -167,7 +526,11 @@ button:active {
 .suggestions-list {
   margin: 0;
   padding-left: 20px;
+<<<<<<< HEAD
   color: #0f172a;
+=======
+  color: var(--text-primary);
+>>>>>>> 2b6d99e (Big initial push)
 }
 
 .suggestions-list li {
@@ -182,14 +545,20 @@ button:active {
 }
 
 .pill {
+<<<<<<< HEAD
   background: #eff6ff;
   color: #1d4ed8;
+=======
+  background: var(--pill-bg);
+  color: var(--pill-text);
+>>>>>>> 2b6d99e (Big initial push)
   padding: 6px 10px;
   border-radius: 999px;
   font-weight: 600;
   font-size: 0.85rem;
 }
 
+<<<<<<< HEAD
 .output-card {
   display: grid;
   gap: 10px;
@@ -213,11 +582,35 @@ button:active {
 .inline-label {
   font-weight: 700;
   color: #cbd5e1;
+=======
+.copy-link {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-left: 8px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.copy-link:hover {
+  color: var(--accent-strong);
+}
+
+.copy-link:focus {
+  outline: none;
+  text-decoration: underline;
+>>>>>>> 2b6d99e (Big initial push)
 }
 
 footer {
   margin-top: 32px;
+<<<<<<< HEAD
   color: #475569;
+=======
+  color: var(--text-secondary);
+>>>>>>> 2b6d99e (Big initial push)
   font-size: 0.95rem;
 }
 
@@ -233,4 +626,17 @@ footer {
   .card {
     padding: 16px;
   }
+<<<<<<< HEAD
+=======
+
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .top-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+>>>>>>> 2b6d99e (Big initial push)
 }
